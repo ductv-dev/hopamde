@@ -1,0 +1,9 @@
+version: '3'
+
+tasks:
+  check-lint:
+    cmd: pnpm lint
+  check-types:
+    cmd: pnpm check-types
+  check-format:
+    cmd: pnpm check-format

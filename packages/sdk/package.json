@@ -1,0 +1,22 @@
+{
+  "name": "@workspace/sdk",
+  "version": "1.0.2",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./*": "./src/*.ts"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "generate": "openapi-typescript https://space-dev.idealabs.vn/server/api-docs/openapi.json -o ./src/schema.ts -t --root-types"
+  },
+  "dependencies": {
+    "openapi-fetch": "^0.14.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.6",
+    "@workspace/typescript-config": "workspace:*",
+    "openapi-typescript": "^7.8.0",
+    "typescript": "^5.8.3"
+  }
+}

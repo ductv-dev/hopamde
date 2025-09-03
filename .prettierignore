@@ -1,0 +1,17 @@
+# Ignore artifacts:
+build
+dist
+coverage
+package-lock.json
+commitlint.config.js
+.husky
+.idea
+.turbo
+node_modules
+.next
+packages/sdk/src/schema.ts
+packages/*-sdk/src/schema.ts
+apps/server/openapi.json
+apps/server/config/schema.json
+**/migrations/**/*
+pnpm-lock.yaml

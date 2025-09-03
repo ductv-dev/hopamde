@@ -1,0 +1,29 @@
+{
+  "name": "@workspace/ui-utils",
+  "version": "0.5.11",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --max-warnings 0 --fix"
+  },
+  "dependencies": {
+    "@workspace/auth": "workspace:*",
+    "@workspace/sdk": "workspace:*",
+    "better-auth": "^1.2.11",
+    "js-big-decimal": "^2.2.0",
+    "js-cookie": "^3.0.5",
+    "openapi-fetch": "^0.14.0",
+    "openapi-react-query": "^0.5.0"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "eslint": "^9.30.0"
+  }
+}

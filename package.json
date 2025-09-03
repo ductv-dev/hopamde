@@ -1,0 +1,38 @@
+{
+  "name": "base-tuborepo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "turbo build",
+    "build:client": "turbo build --filter=client",
+    "check-format": "prettier --check \"**/*.{js,ts,tsx,md,json,yml,yaml}\" --log-level warn",
+    "check-types": "turbo check-types",
+    "dev": "turbo dev",
+    "dev:client": "turbo dev --filter=client",
+    "format": "prettier --write \"**/*.{js,ts,tsx,md,json,yml,yaml}\" --log-level warn",
+    "generate-openapi": "turbo server#generate:openapi",
+    "generate-sdk": "turbo @workspace/sdk#generate",
+    "install-hooks": "lefthook install",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
+    "release": "changeset version && changeset tag && git push origin --tags",
+    "test": "turbo test"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.5",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.2",
+    "@prettier/plugin-oxc": "^0.0.4",
+    "@types/node": "^24.0.6",
+    "changesets-gitlab": "^0.13.3",
+    "lefthook": "^1.11.14",
+    "prettier": "^3.6.2",
+    "prettier-plugin-packagejson": "^2.5.17",
+    "prettier-plugin-tailwindcss": "^0.6.13",
+    "turbo": "^2.5.6",
+    "typescript": "^5.8.3"
+  },
+  "packageManager": "pnpm@10.15.0",
+  "engines": {
+    "node": ">=22"
+  }
+}

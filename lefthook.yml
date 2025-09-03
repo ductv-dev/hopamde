@@ -1,0 +1,23 @@
+pre-commit:
+  parallel: true
+  commands:
+    format:
+      glob:
+        - '*.{js,ts,tsx,md,json,yml,yaml}'
+      stage_fixed: true
+      run: pnpm format
+    fix-lint:
+      glob:
+        - '*.{ts,cts,mts,tsx}'
+        - 'pnpm-lock.yaml'
+        - 'packages/eslint-config/*'
+        - '**/eslint.config.js'
+      stage_fixed: true
+      run: pnpm lint:fix
+    check-types:
+      glob:
+        - '*.{ts,cts,mts,tsx}'
+        - 'pnpm-lock.yaml'
+        - 'packages/typescript-config/*'
+        - '**/tsconfig.json'
+      run: pnpm check-types

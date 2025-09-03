@@ -1,0 +1,25 @@
+{
+  "name": "@workspace/auth",
+  "version": "0.2.3",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./permissions": "./src/permissions.ts",
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "lint": "eslint --max-warnings 0 ./src",
+    "lint:fix": "eslint --max-warnings 0 --fix ./src"
+  },
+  "dependencies": {
+    "better-auth": "^1.2.11"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.6",
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "eslint": "^9.30.0",
+    "typescript": "^5.8.3"
+  }
+}

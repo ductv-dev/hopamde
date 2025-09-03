@@ -1,0 +1,56 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**", "build/**"],
+      "env": [
+        "NODE_ENV",
+        "GEMINI_API_KEY",
+        "OPENAI_API_KEY",
+        "NEXT_PUBLIC_APP_URL",
+        "NEXT_PUBLIC_SHARE_BASE_URL",
+        "REDIS_URL",
+        "CAMPAIGN_ID",
+        "PARTNER_COOKIE",
+        "DATABASE_URL",
+        "GOOGLE_CLIENT_ID",
+        "GOOGLE_CLIENT_SECRET",
+        "NEXT_PUBLIC_API_URL",
+        "GA_CODE",
+        "GA_PROPERTY_ID",
+        "GA_CLIENT_EMAIL",
+        "GA_PRIVATE_KEY",
+        "TIKTOK_HOST"
+      ]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "lint:fix": {
+      "dependsOn": ["^lint:fix"]
+    },
+    "check-types": {
+      "dependsOn": ["^check-types"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "@workspace/sdk#generate": {
+      "cache": false
+    },
+    "start": {
+      "dependsOn": ["^start"],
+      "persistent": true
+    },
+    "test": {
+      "dependsOn": ["^test"],
+      "inputs": ["$TURBO_DEFAULT$", ".env"],
+      "passThroughEnv": ["*"],
+      "cache": false
+    }
+  }
+}

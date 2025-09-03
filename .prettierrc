@@ -1,0 +1,31 @@
+{
+  "singleQuote": true,
+  "semi": true,
+  "printWidth": 80,
+  "bracketSameLine": false,
+  "embeddedLanguageFormatting": "auto",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxSingleQuote": false,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "plugins": [
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-packagejson",
+    "prettier-plugin-tailwindcss"
+  ],
+  "tailwindFunctions": ["cn", "tv", "cx", "clsx", "cva"],
+  "tailwindStylesheet": "./packages/ui/src/styles/globals.css",
+  "importOrder": [
+    "<TYPES>^(node:)",
+    "<TYPES>",
+    "<TYPES>^[.]",
+    "<BUILTIN_MODULES>",
+    "<THIRD_PARTY_MODULES>",
+    "^(@workspace)(/.*)$",
+    "^[.]"
+  ]
+}
