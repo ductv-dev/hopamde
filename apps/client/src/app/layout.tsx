@@ -1,5 +1,6 @@
 import { AppProvider, NextThemeProvider, Theme } from '@workspace/ui-providers';
 import '@workspace/ui/globals.css';
+import './styles.css';
 import { Inter } from 'next/font/google';
 
 const fontSans = Inter({
