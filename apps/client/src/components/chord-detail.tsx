@@ -253,13 +253,7 @@ export default function ChordDetail({ id }: Props) {
             <h1 className="p-3 text-center text-4xl font-semibold">
               {data?.song_name}
             </h1>
-            <Image
-              src={'/chord/B7.png'}
-              alt="Hợp âm đang cập nhật"
-              width={220}
-              height={220}
-              className="sm:h-[250px] sm:w-[250px]"
-            ></Image>
+
             <div className="my-4 flex justify-between gap-2 lg:justify-start">
               <Button className="w-fit rounded-md border border-white text-sm font-bold sm:text-base dark:bg-blue-600">
                 Author: {data?.author}
