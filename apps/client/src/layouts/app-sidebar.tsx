@@ -1,6 +1,6 @@
 'use client';
 
-import { useMenu } from '@/hooks';
+import { useMenu } from '@/app/hooks';
 import Link from 'next/link';
 import {
   Sidebar,

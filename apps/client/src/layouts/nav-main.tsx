@@ -1,7 +1,7 @@
 'use client';
 
 import type { LucideIcon } from 'lucide-react';
-import { useMenu } from '@/hooks';
+import { useMenu } from '@/app/hooks';
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import { authClient } from '@workspace/ui-utils';
