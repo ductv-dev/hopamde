@@ -1,4 +1,4 @@
-import ChordDetail from '../../../components/chord-detail';
+import ChordDetail from '../../components/chord-detail';
 
 type PageProps = {
   params: { uid: string };

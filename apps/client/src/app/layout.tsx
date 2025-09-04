@@ -3,8 +3,8 @@ import '@workspace/ui/globals.css';
 import './styles.css';
 import { Inter } from 'next/font/google';
 import { Suspense } from 'react';
-import { Footer } from '../../components/footer';
-import { TheHeader } from '../../components/the-header';
+import { Footer } from '../components/footer';
+import { TheHeader } from '../components/the-header';
 import ReactQueryProvider from './providers';
 
 const fontSans = Inter({

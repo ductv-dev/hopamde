@@ -12,7 +12,7 @@ import {
   PaginationPrevious,
 } from '@workspace/ui/components/pagination';
 import { Skeleton } from '@workspace/ui/components/skeleton';
-import { ListSong } from '../../../components/list-card-song';
+import { ListSong } from '../../components/list-card-song';
 
 type Props = {
   id: string;

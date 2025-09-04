@@ -133,7 +133,7 @@ export default function ChordDetail({ id }: Props) {
     { name: 'A5', image: '/chord/A5' },
 
     // A-sharp-
-    { name: 'A-sharp-', image: '/chord/A-sharp-' },
+    { name: 'A-sharp', image: '/chord/A-sharp' },
     { name: 'A-sharp-m', image: '/chord/A-sharp-m' },
     { name: 'A-sharp-7', image: '/chord/A-sharp-7' },
     { name: 'A-sharp-maj7', image: '/chord/A-sharp-maj7' },
@@ -253,7 +253,13 @@ export default function ChordDetail({ id }: Props) {
             <h1 className="p-3 text-center text-4xl font-semibold">
               {data?.song_name}
             </h1>
-
+            <Image
+              src={'/chord/B7.png'}
+              alt="Hợp âm đang cập nhật"
+              width={220}
+              height={220}
+              className="sm:h-[250px] sm:w-[250px]"
+            ></Image>
             <div className="my-4 flex justify-between gap-2 lg:justify-start">
               <Button className="w-fit rounded-md border border-white text-sm font-bold sm:text-base dark:bg-blue-600">
                 Author: {data?.author}
