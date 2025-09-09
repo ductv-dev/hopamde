@@ -21,12 +21,12 @@ export const DATA = {
     'Vue.js',
   ],
   navbar: [
-    { href: '/', icon: HomeIcon, label: 'Home' },
-    {
-      href: 'https://www.facebook.com/ductv.devl/',
-      icon: NotebookIcon,
-      label: 'Facebook',
-    },
+    { href: 'https://ductv.dev', icon: HomeIcon, label: 'Home' },
+    // {
+    //   href: 'https://www.facebook.com/ductv.devl/',
+    //   icon: NotebookIcon,
+    //   label: 'Facebook',
+    // },
   ],
   contact: {
     email: 'vietducdtu@gmail.com',
@@ -36,14 +36,6 @@ export const DATA = {
         name: 'GitHub',
         url: 'https://github.com/ductv-dev',
         icon: Icons.github,
-
-        navbar: true,
-      },
-      LinkedIn: {
-        name: 'LinkedIn',
-        url: 'https://dub.sh/dillion-linkedin',
-        icon: Icons.linkedin,
-
         navbar: true,
       },
       Instagram: {
@@ -52,17 +44,16 @@ export const DATA = {
         icon: Icons.instagram,
         navbar: true,
       },
-      // Youtube: {
-      //   name: 'Youtube',
-      //   url: 'https://dub.sh/dillion-youtube',
-      //   icon: Icons.youtube,
-      //   navbar: true,
-      // },
+      Facebook: {
+        name: 'Facebook',
+        url: 'https://www.facebook.com/ductv.devl', // đổi thành link FB của bạn
+        icon: Icons.facebook,
+        navbar: true,
+      },
       email: {
         name: 'Send Email',
         url: 'mailto:vietducdtu@gmail.com?subject=Hello&body=I%20want%20to%20contact%20you',
         icon: Icons.email,
-
         navbar: false,
       },
     },

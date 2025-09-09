@@ -1,6 +1,7 @@
 'use client';
 
 import { MenuBar } from '@/components/menu-bar';
+import Navbar from '@/components/navbar';
 import { ProjectCard } from '@/components/project-card';
 import { ResumeCard } from '@/components/resume-card';
 import { DATA } from '@/data/resume';
@@ -195,9 +196,7 @@ export const HomePage = () => {
         </div>
       </section>
 
-      <div className="fixed bottom-0 left-0 right-0 z-50 mx-auto mb-4 flex w-full max-w-2xl justify-center px-4">
-        <MenuBar />
-      </div>
+      <Navbar />
     </div>
   );
 };
