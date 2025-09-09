@@ -1,17 +1,13 @@
 'use client';
 
+import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import { ChevronRightIcon } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from '@workspace/ui/components/avatar';
-import { Badge } from '@workspace/ui/components/badge';
-import { Card, CardHeader } from '@workspace/ui/components/card';
-import { cn } from '@workspace/ui/lib/utils';
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
+import { Badge } from './ui/badge';
+import { Card, CardHeader } from './ui/card';
 
 interface ResumeCardProps {
   logoUrl: string;
@@ -51,15 +47,11 @@ export const ResumeCard = ({
       <Card className="flex">
         <div className="flex-none">
           <Avatar className="bg-muted-background dark:bg-foreground m-auto size-12 border">
-            <AvatarImage
-              src={logoUrl}
-              alt={altText}
-              className="object-contain"
-            />
+            <AvatarImage src={logoUrl} alt={altText} className="object-cover" />
             <AvatarFallback>{altText[0]}</AvatarFallback>
           </Avatar>
         </div>
-        <div className="group ml-4 flex-col items-center">
+        <div className="group ml-4 flex flex-grow flex-col justify-start">
           <CardHeader>
             <div className="flex items-center justify-between gap-x-2 text-base">
               <h3 className="inline-flex items-center justify-center text-xs font-semibold leading-none sm:text-sm">

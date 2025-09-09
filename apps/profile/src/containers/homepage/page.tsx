@@ -2,6 +2,7 @@
 
 import { MenuBar } from '@/components/menu-bar';
 import { ProjectCard } from '@/components/project-card';
+import { ResumeCard } from '@/components/resume-card';
 import { DATA } from '@/data/resume';
 import { motion } from 'framer-motion';
 import { ChevronRightIcon } from 'lucide-react';
@@ -58,83 +59,56 @@ export const HomePage = () => {
           </div>
         </BlurFade>
       </section>
+      {/* Work Experience */}
+      <section id="work" className="mt-10">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+            <h2 className="text-xl font-bold">Work Experience</h2>
+          </BlurFade>
+          {DATA.work.map((work, id) => (
+            <BlurFade
+              key={work.company}
+              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+            >
+              <ResumeCard
+                key={work.company}
+                logoUrl={work.logoUrl}
+                altText={work.company}
+                title={work.company}
+                subtitle={work.title}
+                href={work.href}
+                badges={work.badges}
+                period={`${work.start} - ${work.end ?? 'Present'}`}
+                description={work.description}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </section>
 
       {/* Education */}
 
-      <section id="educalion" className="mt-10">
-        <div className="flex flex-col gap-y-3">
+      <section id="education" className="mt-10">
+        <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <h2 className="text-xl font-bold">Education</h2>
           </BlurFade>
-
-          <BlurFade delay={BLUR_FADE_DELAY * 8}>
-            <Link
-              target="_blank"
-              href={'https://duytan.edu.vn/'}
-              className="block cursor-pointer"
-              // onClick={(e) => {
-              //   e.preventDefault();
-              //   setIsExpanded(!isExpanded);
-              // }}
+          {DATA.education.map((education, id) => (
+            <BlurFade
+              key={education.school}
+              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
             >
-              <Card className="flex border-0 bg-none shadow-none dark:bg-white/0">
-                <div className="group ml-4 items-center">
-                  <CardHeader>
-                    <div className="flex items-center justify-between gap-x-2 text-base">
-                      <div className="w-16">
-                        <Avatar className="bg-muted-background dark:bg-foreground m-auto size-12 border">
-                          <AvatarImage
-                            src={
-                              'https://files02.duytan.edu.vn/svruploads/dtu-duytan/upload/images/logoDT-70.png'
-                            }
-                            alt={'DTU Logo'}
-                            className="object-contain"
-                          />
-                          <AvatarFallback>DTU</AvatarFallback>
-                        </Avatar>
-                      </div>
-                      <div className="flex flex-grow items-center justify-between">
-                        <div>
-                          <h3 className="inline-flex items-center justify-center text-xs font-semibold leading-none sm:text-sm">
-                            Duy Tan University
-                            <ChevronRightIcon
-                              className={cn(
-                                'size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100',
-                                isExpanded ? 'rotate-90' : 'rotate-0',
-                              )}
-                            />
-                          </h3>
-                          <div className="font-sans text-xs">
-                            Software Engineering
-                          </div>
-                        </div>
-
-                        <div className="text-muted-foreground text-right text-xs tabular-nums sm:text-sm">
-                          2021-2025
-                        </div>
-                      </div>
-                    </div>
-                  </CardHeader>
-
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{
-                      opacity: isExpanded ? 1 : 0,
-
-                      height: isExpanded ? 'auto' : 0,
-                    }}
-                    transition={{
-                      duration: 0.7,
-                      ease: [0.16, 1, 0.3, 1],
-                    }}
-                    className="mt-2 text-xs sm:text-sm"
-                  >
-                    description
-                  </motion.div>
-                </div>
-              </Card>
-            </Link>
-          </BlurFade>
+              <ResumeCard
+                key={education.school}
+                href={education.href}
+                logoUrl={education.logoUrl}
+                altText={education.school}
+                title={education.school}
+                subtitle={education.degree}
+                period={`${education.start} - ${education.end}`}
+              />
+            </BlurFade>
+          ))}
         </div>
       </section>
       {/* Skills */}
@@ -153,7 +127,7 @@ export const HomePage = () => {
         </div>
       </section>
       {/* Projects */}
-      <section id="projects">
+      <section id="projects" className="mt-10">
         <div className="w-full space-y-12 py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -192,6 +166,32 @@ export const HomePage = () => {
               </BlurFade>
             ))}
           </div>
+        </div>
+      </section>
+      {/* Contact */}
+      <section id="contact">
+        <div className="grid w-full items-center justify-center gap-4 px-4 py-12 text-center md:px-6">
+          <BlurFade delay={BLUR_FADE_DELAY * 16}>
+            <div className="space-y-3">
+              <div className="bg-foreground text-background inline-block rounded-lg px-3 py-1 text-sm">
+                Contact
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                Get in Touch
+              </h2>
+              <p className="text-muted-foreground mx-auto max-w-[600px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Have a question or idea? Send me an email at{' '}
+                <Link
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=vietducdtu@gmail.com&su=Hello&body=Hi"
+                  className="text-blue-500 hover:underline"
+                >
+                  vietducdtu@gmail.com
+                </Link>{' '}
+                and I’ll get back to you as soon as possible. Please, no
+                solicitations.
+              </p>
+            </div>
+          </BlurFade>
         </div>
       </section>
 
