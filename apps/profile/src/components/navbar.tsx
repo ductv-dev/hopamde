@@ -13,7 +13,7 @@ import { ModeToggle } from './mode-toggle';
 
 export default function Navbar() {
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-5 flex h-full max-h-16 origin-bottom">
+    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-10 flex h-full max-h-16 origin-bottom">
       {/* Backdrop blur + gradient */}
       <div className="bg-background/0 dark:bg-background/40 fixed inset-x-0 bottom-0 h-16 w-full border-t border-white/10 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.3)] backdrop-blur-xl [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:border-white/20"></div>
 
