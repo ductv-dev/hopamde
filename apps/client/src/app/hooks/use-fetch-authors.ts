@@ -1,6 +1,6 @@
-import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import queryString from 'query-string';
+import { useQuery } from '@workspace/ui-providers';
 
 type TGenresQuery = {
   offset: number;

@@ -1,7 +1,6 @@
 export * from './app-provider';
 export * from './enum';
 export * from './next-theme-provider';
-export * from './private-provider';
 
 export {
   NotificationsProvider,

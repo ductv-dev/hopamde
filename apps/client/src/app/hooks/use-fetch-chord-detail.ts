@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query';
+import { useQuery } from '@workspace/ui-providers';
 import axios from 'axios';
 
 type Song = {
