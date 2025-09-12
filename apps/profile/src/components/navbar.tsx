@@ -2,6 +2,7 @@ import { DATA } from '@/data/resume';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { buttonVariants } from '@workspace/ui/components/button';
+import { AnimatedThemeToggler } from '@workspace/ui/components/magicui/animated-theme-toggler';
 import { Dock, DockIcon } from '@workspace/ui/components/magicui/dock';
 import { Separator } from '@workspace/ui/components/separator';
 import {
@@ -69,16 +70,7 @@ export default function Navbar() {
         <Separator orientation="vertical" className="mx-1 h-full py-2" />
 
         {/* Theme toggle */}
-        <DockIcon>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <ModeToggle />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Theme</p>
-            </TooltipContent>
-          </Tooltip>
-        </DockIcon>
+        <AnimatedThemeToggler />
       </Dock>
     </div>
   );
